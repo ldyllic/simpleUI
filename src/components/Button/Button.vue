@@ -1,5 +1,6 @@
 <template>
   <button
+    ref="_ref"
     class="vk-button"
     :class="{
       [`vk-button--${type}`]: type,
@@ -10,6 +11,8 @@
       'is-disabled': disabled,
     }"
     :disabled="disabled"
+    :autofocus="autofocus"
+    :type="nativeType"
   >
     <span>
       <slot></slot>
@@ -17,18 +20,29 @@
   </button>
 </template>
 
-<script lang="ts">
-import { defineComponent } from "vue";
-
-export default defineComponent({
+<script setup lang="ts">
+import { ref } from "vue";
+import type { ButtonProps } from "./types.ts";
+defineOptions({
   name: "VkButton",
+});
+
+// 类型默认值
+withDefaults(defineProps<ButtonProps>(), {
+  nativeType: "button",
+});
+
+// 获取组件实例
+const _ref = ref<HTMLButtonElement>();
+
+// 暴露组件实例
+defineExpose({
+  ref: _ref,
 });
 </script>
 
-<script setup lang="ts">
-// import type { ButtonProps } from "./types.ts";
-import { buttonProps } from "./types";
-defineProps(buttonProps);
-</script>
-
-<style scoped></style>
+<style>
+.vk-button{
+  background-color: var(--main-bg-color);
+}
+</style>
