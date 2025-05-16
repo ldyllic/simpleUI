@@ -4,7 +4,11 @@
   </header>
 
   <main>
-    <Button type="primary" plain disabled ref="buttonRef">Test Button</Button>
+    <Button ref="buttonRef">Test Button</Button>
+    <Button plain>Plain Button</Button>
+    <Button round>Round Button</Button>
+    <Button circle>VK</Button>
+    <Button disabled>Disabled Button</Button>
   </main>
 </template>
 <script setup lang="ts">
