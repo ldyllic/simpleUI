@@ -42,7 +42,7 @@ defineExpose({
 </script>
 
 <style>
-.vk-button{
+/* .vk-button{
   background-color: var(--main-bg-color);
-}
+} */
 </style>

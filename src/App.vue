@@ -8,15 +8,47 @@
     <Button plain>Plain Button</Button>
     <Button round>Round Button</Button>
     <Button circle>VK</Button>
-    <Button disabled>Disabled Button</Button>
+    <Button disabled>Disabled Button</Button><br /><br />
+    <Button type="primary">Primary</Button>
+    <Button type="success">Success</Button>
+    <Button type="warning">Warning</Button>
+    <Button type="danger">Danger</Button><br /><br />
+    <Button type="primary" plain>Primary</Button>
+    <Button type="success" plain>Success</Button>
+    <Button type="info" plain>Info</Button>
+    <Button type="warning" plain>Warning</Button>
+    <Button type="danger" plain>Danger</Button><br /><br />
+    <Button size="large" plain>Large</Button>
+    <Button size="small" plain>Small</Button>
+
+    <Collapse v-model="openedValue" accordion>
+      <Item name="a">
+        <template #title>
+          <h1>nice title</h1>
+        </template>
+        <h1>headline title</h1>
+        <div>this is content a aaa</div>
+      </Item>
+      <Item name="b" title="nice title b item b">
+        <div>this is bbbbb test</div>
+      </Item>
+      <Item name="c" title="nice cccc" disabled>
+        <div>this is cccc test</div>
+      </Item>
+    </Collapse>
+    {{ openedValue }}
   </main>
 </template>
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 import Button from "./components/Button/Button.vue";
+import Collapse from "./components/Collapse/Collapse.vue";
+import Item from "./components/Collapse/CollapseItem.vue";
 import type { ButtonInstance } from "./components/Button/types";
 
 const buttonRef = ref<ButtonInstance | null>(null);
+
+const openedValue = ref(["a"]);
 
 onMounted(() => {
   if (buttonRef.value) {
