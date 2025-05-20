@@ -24,18 +24,15 @@
     <Button size="large" loading>Loading</Button>
     <Button size="large" icon="arrow-up">Arrow</Button><br /><br />
 
-    <Collapse v-model="openedValue" accordion>
-      <Item name="a">
-        <template #title>
-          <h1>nice title</h1>
-        </template>
+    <Collapse v-model="openedValue">
+      <Item name="a" title="Title A">
         <h1>headline title</h1>
         <div>this is content a aaa</div>
       </Item>
-      <Item name="b" title="nice title b item b">
+      <Item name="b" title="Title B">
         <div>this is bbbbb test</div>
       </Item>
-      <Item name="c" title="nice cccc" disabled>
+      <Item name="c" title="Disabled Title" disabled>
         <div>this is cccc test</div>
       </Item>
     </Collapse>

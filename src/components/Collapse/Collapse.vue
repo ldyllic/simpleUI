@@ -27,21 +27,24 @@ if (props.accordion && aciveNames.value.length > 1) {
   console.warn("accordion mode should only have one acitve item");
 }
 const handleItemClick = (item: NameType) => {
+  let _aciveNames = [...aciveNames.value];
   if (props.accordion) {
-    aciveNames.value = [aciveNames.value[0] === item ? "" : item];
+    _aciveNames = [aciveNames.value[0] === item ? "" : item];
+    aciveNames.value = _aciveNames;
   } else {
-    const index = aciveNames.value.indexOf(item);
+    const index = _aciveNames.indexOf(item);
     if (index > -1) {
       // 存在，删除数组对应的一项
-      aciveNames.value.splice(index, 1);
+      _aciveNames.splice(index, 1);
     } else {
       // 不存在，插入对应的name
-      aciveNames.value.push(item);
+      _aciveNames.push(item);
     }
+    aciveNames.value = _aciveNames;
   }
 
-  emits("update:modelValue", aciveNames.value);
-  emits("change", aciveNames.value);
+  emits("update:modelValue", _aciveNames);
+  emits("change", _aciveNames);
 };
 provide(collapseContextKey, {
   aciveNames,
