@@ -2,7 +2,8 @@
   <header>
     <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
   </header>
-
+  <Icon icon="user-secret" />
+  <Icon icon="arrow-up" size="2xl" type="danger" color="#2f987e" />
   <main>
     <Button ref="buttonRef">Test Button</Button>
     <Button plain>Plain Button</Button>
@@ -19,7 +20,9 @@
     <Button type="warning" plain>Warning</Button>
     <Button type="danger" plain>Danger</Button><br /><br />
     <Button size="large" plain>Large</Button>
-    <Button size="small" plain>Small</Button>
+    <Button size="small" plain>Small</Button><br /><br />
+    <Button size="large" loading>Loading</Button>
+    <Button size="large" icon="arrow-up">Arrow</Button><br /><br />
 
     <Collapse v-model="openedValue" accordion>
       <Item name="a">
@@ -44,6 +47,7 @@ import { ref, onMounted } from "vue";
 import Button from "./components/Button/Button.vue";
 import Collapse from "./components/Collapse/Collapse.vue";
 import Item from "./components/Collapse/CollapseItem.vue";
+import Icon from "./components/Icon/Icon.vue";
 import type { ButtonInstance } from "./components/Button/types";
 
 const buttonRef = ref<ButtonInstance | null>(null);
