@@ -1,24 +1,42 @@
+import type { VNode } from "vue";
+
+// 选项类型定义
 export interface SelectOption {
-  label: string;
-  value: string;
-  disabled?: boolean;
+  label: string;       // 选项显示文本（必填）
+  value: string;       // 选项实际值（必填）
+  disabled?: boolean;  // 是否禁用该选项（可选）
 }
 
+export type RenderLabelFunc = (option: SelectOption) => VNode
+export type CustomFilterFunc = (value: string) => SelectOption[]
+export type CustomFilterRemoteFunc = (value: string) => Promise<SelectOption[]>
+
+// 组件属性接口
 export interface SelectProps {
-  // v-model
-  modelValue: string;
-  // 选项
-  options: SelectOption[];
-  // 一些基本表单属性
-  placeholder: string;
-  disabled: boolean;
+  modelValue: string;    // 当前选中的选项值（必填）
+  options?: SelectOption[]; // 选项列表（必填）
+  placeholder: string;   // 占位提示文本（必填）
+  disabled: boolean;     // 是否禁用选择器（必填）
+  clearable?: boolean;
+  renderLabel?: RenderLabelFunc;
+  filterable?: boolean;
+  filterMethod?: CustomFilterFunc;
+  remote?: boolean;
+  remoteMethod?: CustomFilterRemoteFunc;
 }
+
+// 组件内部状态
 export interface SelectStates {
-  inputValue: string;
-  selectedOption: null | SelectOption;
+  inputValue: string;            // 输入框显示值
+  selectedOption: null | SelectOption; // 当前选中项
+  mouseHover: boolean;
+  loading: boolean;
+  highlightIndex: number
 }
+
 export interface SelectEmits {
-  (e:'change', value: string) : void;
-  (e:'update:modelValue', value: string) : void;
-  (e: 'visible-change', value:boolean): void;
+  (e: 'update:modelValue', value: string): void;
+  (e: 'change', value: string): void;
+  (e: 'visible-change', value: boolean): void;
+  (e: 'clear'): void;
 }

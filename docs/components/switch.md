@@ -35,3 +35,29 @@ description: Switch 组件的文档
 使用 **active-text** 属性与 **inactive-text** 属性来设置开关的文字描述。
 
 <preview path="../demo/Switch/Text.vue" title="支持文字描述" description="Switch 文字描述"></preview>
+
+### Switch 开关属性
+
+|      参数       |       类型        | 默认值  |       说明       | 必填 |            可选值            |
+| :-------------: | :---------------: | :-----: | :--------------: | :--: | :--------------------------: |
+|   **模型值**    |                   |         |                  |      |                              |
+|  `modelValue`   | `SwitchValueType` |    -    |  开关状态绑定值  |  ✅   | `true`/`false`, 字符串，数字 |
+|  **状态控制**   |                   |         |                  |      |                              |
+|   `disabled`    |     `boolean`     | `false` |   是否禁用状态   |  ❌   |       `true`, `false`        |
+|  **显示文本**   |                   |         |                  |      |                              |
+|  `activeText`   |     `string`      |    -    | 开启状态显示文本 |  ❌   |          任意字符串          |
+| `inactiveText`  |     `string`      |    -    | 关闭状态显示文本 |  ❌   |          任意字符串          |
+|   **值映射**    |                   |         |                  |      |                              |
+|  `activeValue`  | `SwitchValueType` | `true`  | 开启状态的绑定值 |  ❌   | `true`/`false`, 字符串，数字 |
+| `inactiveValue` | `SwitchValueType` | `false` | 关闭状态的绑定值 |  ❌   | `true`/`false`, 字符串，数字 |
+|  **基础属性**   |                   |         |                  |      |                              |
+|     `size`      |     `string`      |    -    |     开关尺寸     |  ❌   |       `small`, `large`       |
+|     `name`      |     `string`      |    -    |  原生 name 属性  |  ❌   |          任意字符串          |
+|      `id`       |     `string`      |    -    |   原生 id 属性   |  ❌   |          任意字符串          |
+
+### Switch 开关事件
+
+|        事件名称         |           触发时机           |         回调参数         |                  说明                  |
+| :---------------------: | :--------------------------: | :----------------------: | :------------------------------------: |
+| **`update:modelValue`** |    开关状态变化时实时触发    | `value: SwitchValueType` |   实现 `v-model` 双向绑定的核心事件    |
+|      **`change`**       | 开关交互完成且状态变化后触发 | `value: SwitchValueType` | 状态改变确认事件，适用于提交或记录操作 |

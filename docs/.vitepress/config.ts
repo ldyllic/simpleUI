@@ -43,6 +43,7 @@ export default defineConfig({
         items: [
           { text: '什么是Simple UI？', link: '/markdown-examples' },
           { text: '设计原则', link: '/api-examples' },
+          { text: '安装与使用', link: '/installUse' },
         ]
       },
       {

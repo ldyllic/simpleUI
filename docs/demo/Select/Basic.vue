@@ -1,7 +1,7 @@
 <script setup>
 import { ref } from 'vue'
 import Select from '@/components/Select/Select.vue'
-const test = ref('1')
+const test = ref('')
 const options2 = [
   { label: 'hello', value: '1' },
   { label: 'xyz', value: '2' },
@@ -11,5 +11,4 @@ const options2 = [
 </script>
 <template>
   <Select v-model="test" placeholder="基础选择器，请选择" :options="options2" />
-  <span>{{test}}</span>
 </template>
