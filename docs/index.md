@@ -6,6 +6,9 @@ hero:
   name: "Simple UI"
   text: "轻量级的UI组件库"
   tagline: "基于Vue3+TypeScript的UI组件库"
+  image:
+    src: /SimpleUI.png
+    alt: Simple UI
   actions:
     - theme: brand
       text: 什么是Simple UI？

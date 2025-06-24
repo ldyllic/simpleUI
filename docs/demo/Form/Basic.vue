@@ -9,19 +9,12 @@ import Button from '@/components/Button/Button.vue'
 import Switch from '@/components/Switch/Switch.vue'
 import Select from '@/components/Select/Select.vue'
 const model = reactive({
-  email: '123',
-  password: '122',
+  email: '',
+  password: '',
   confirmPwd: '',
   agreement: false,
-  zone: '',
-  test:''
+  zone: ''
 })
-
-const rules = {
-  email: [{ type: 'email', required: true, trigger: 'blur' }],
-  password: [{ type: 'string', required: true, trigger: 'blur', min: 3, max: 5 }],
-  test: [{ type: 'string', required: true, trigger: 'blur' }],
-}
 
 const options = [
   { label: 'zone 1', value: 'one' },
@@ -30,12 +23,7 @@ const options = [
 ]
 const formRef = ref()
 const submit = async () => {
-  try {
-    await formRef.value.validate()
-    console.log('passed!');
-  } catch (e) {
-    console.log('e==>',e);
-  }
+  alert('submitted!')
 }
 const reset = () => {
   formRef.value.resetFields()
@@ -43,31 +31,36 @@ const reset = () => {
 </script>
 
 <template>
-  <div>
-    <Form :model="model" ref="formRef" :rules="rules">
-      <!-- <FormItem prop="name" label="enter your name" #default="{ validate }">
+<div>
+  <Form :model="model" ref="formRef">
+    <!-- <FormItem prop="name" label="enter your name" #default="{ validate }">
       <input v-model="model.name" @blur="validate('blur')" @input="validate('input')"/>
     </FormItem> -->
-      <FormItem prop="email" label="the email">
-        <Input v-model="model.email" />
-      </FormItem>
-      <FormItem prop="password" label="the password">
-        <Input v-model="model.password" type="password" />
-      </FormItem>
-      <FormItem prop="zone" label="zone">
-        <Select v-model="model.zone" :options="options" />
-      </FormItem>
-      <FormItem>
-        <Button @click.prevent="submit" type="primary">Submit</Button>
-        <Button @click.prevent="reset">Reset</Button>
-      </FormItem>
-    </Form>
+    <FormItem prop="email" label="the email">
+      <Input v-model="model.email" />
+    </FormItem>
+    <FormItem prop="password" label="the password">
+      <Input v-model="model.password" type="password" />
+    </FormItem>
+    <FormItem prop="agreement" label="agreement">
+      <Switch v-model="model.agreement" />
+    </FormItem>
+    <FormItem prop="zone" label="zone">
+      <Select v-model="model.zone" :options="options" />
+    </FormItem>
+    <FormItem>
+      <Button @click.prevent="submit" type="primary">Submit</Button>
+      <Button @click.prevent="reset">Reset</Button>
+    </FormItem>
+  </Form>
 
-    <p>
-      form value:
-    <pre>{{ model }}</pre>
-    </p>
-  </div>
+  <p>
+    form value:
+    <pre>{{model}}</pre>
+  </p>
+</div>
 </template>
 
-<style></style>
+<style>
+
+</style>

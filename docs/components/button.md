@@ -33,15 +33,15 @@ description: Button 组件的文档
 
 ### Button 按钮属性
 
-| Name              | Description                                                             | Type                                                                            | Default |
-| ----------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------- | ------- |
-| size              | button size                                                             | `enum` - `'large'\| 'small'`                                                    | —       |
-| type              | button type                                                             | `enum` - `'primary'\| 'success'\| 'warning'\| 'danger'\| 'info'`                | —       |
-| plain             | determine whether it's a plain button                                   | `boolean`                                                                       | false   |
-| round             | determine whether it's a round button                                   | `boolean`                                                                       | false   |
-| circle            | determine whether it's a circle button                                  | `boolean`                                                                       | false   |
-| loading           | determine whether it's loading                                          | `boolean`                                                                       | false   |
-| disabled          | disable the button                                                      | `boolean`                                                                       | false   |
-| icon              | icon component                                                          | `string`                                                                        | —       |
-| autofocus         | same as native button's `autofocus`                                     | `boolean`                                                                       | false   |
-| native-type       | same as native button's `type`                                          | `enum` - `'button'\| 'submit'\| 'reset'`                                        | button  |
+| 参数        | 说明                              | 类型                                                         | 默认值 |
+| ----------- | --------------------------------- | ------------------------------------------------------------ | ------ |
+| size        | button 按钮尺寸                   | `enum` - `'large'\| 'small'`                                 | —      |
+| type        | button 按钮类型                   | `enum` - `'primary'\| 'success'\| 'warning'\| 'danger'\| 'info'` | —      |
+| plain       | 确定它是否为普通按钮              | `boolean`                                                    | false  |
+| round       | 确定它是否为round按钮             | `boolean`                                                    | false  |
+| circle      | 确定它是否为circle按钮            | `boolean`                                                    | false  |
+| loading     | 确定它是否正在加载                | `boolean`                                                    | false  |
+| disabled    | 禁用 button                       | `boolean`                                                    | false  |
+| icon        | icon 元件                         | `string`                                                     | —      |
+| autofocus   | 与原生 Button 的 `autofocus` 相同 | `boolean`                                                    | false  |
+| native-type | 与原生 Button 的 `type`           | `enum` - `'button'\| 'submit'\| 'reset'`                     | button |

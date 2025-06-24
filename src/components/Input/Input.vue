@@ -116,7 +116,9 @@ const inputRef = ref() as Ref<HTMLInputElement>
 // 表单校验
 const formItemContext= inject(formItemContextKey)
 const runValidation = (trigger?: string)=>{
-  formItemContext?.validate(trigger)
+  formItemContext?.validate(trigger).catch((e)=>{
+    console.log(e.errors);
+  })
 }
 
 const showClear = computed(() =>

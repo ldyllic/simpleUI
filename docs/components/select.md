@@ -1,5 +1,5 @@
 ---
-title: Select | V-Element
+title: Select | Simple UI
 description: Select 组件的文档
 ---
 ## Select 选择器

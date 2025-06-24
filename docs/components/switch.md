@@ -1,5 +1,5 @@
 ---
-title: Switch | V-Element
+title: Switch | Simple UI
 description: Switch 组件的文档
 ---
 
