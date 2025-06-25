@@ -9,6 +9,7 @@ import Icon from './components/Icon/Icon.vue'
 import { createMessage } from './components/Message/method'
 import type { ButtonInstance } from './components/Button/types'
 import type { TooltipInstance } from './components/Tooltip/types'
+import WelcomeItem from "./components/WelcomeItem.vue"
 const buttonRef = ref<ButtonInstance | null>(null)
 const tooltipRef = ref<TooltipInstance | null>(null)
 const openedValue = ref(['a'])
@@ -47,6 +48,7 @@ onMounted(() => {
 </script>
 
 <template>
+  <WelcomeItem/>
   <Icon icon="star" />
   <header>
     <Dropdown 
