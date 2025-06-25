@@ -36,6 +36,8 @@ description: Switch 组件的文档
 
 <preview path="../demo/Switch/Text.vue" title="支持文字描述" description="Switch 文字描述"></preview>
 
+## API文档
+
 ### Switch 开关属性
 
 |      参数       |       类型        | 默认值  |       说明       | 必填 |            可选值            |

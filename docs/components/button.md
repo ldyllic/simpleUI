@@ -31,6 +31,8 @@ description: Button 组件的文档
 
 <preview path="../demo/Button/sizeBtn.vue" title="调整尺寸" description="Button 组件的调整尺寸"></preview>
 
+## API文档
+
 ### Button 按钮属性
 
 | 参数        | 说明                              | 类型                                                         | 默认值 |

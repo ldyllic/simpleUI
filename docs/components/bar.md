@@ -36,6 +36,8 @@ description: BarChart 柱状图组件的文档
 
 <preview path="../demo/BarChart/Loading.vue" title="加载状态" description="柱状图加载中的效果"></preview>
 
+## API文档
+
 ### BarChart 属性
 
 | 参数           | 说明                                                                 | 类型                         | 默认值        |

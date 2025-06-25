@@ -18,6 +18,8 @@ description: Collapse 组件的文档
 
 <preview path="../demo/Collapse/Accordion.vue" title="手风琴效果" description="Collapse 组件的手风琴效果"></preview>
 
+## API文档
+
 ### Collapse 折叠面板属性
 
 | 参数                  | 说明                               | 类型                                                 | 可选值 | 默认值 |

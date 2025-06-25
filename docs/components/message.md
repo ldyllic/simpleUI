@@ -28,6 +28,8 @@ description: Message 组件的文档
 
 <preview path="../demo/Message/closeAll.vue" title="手动关闭所有实例" description="Message 组件的手动关闭所有实例"></preview>
 
+## API文档
+
 ### Message 消息提示配置项
 使用 `createMessage` 创建信息，它接受一个Object，以下是 Object 中的属性列表。
 

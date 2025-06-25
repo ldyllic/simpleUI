@@ -42,6 +42,8 @@ description: Select 组件的文档
 
 <preview path="../demo/Select/Remote.vue" title="远程搜索" description="Select 远程搜索"></preview>
 
+## API文档
+
 ### Select 选择器属性
 
 | 参数                  | 说明                           | 类型                                                  | 默认值 |

@@ -39,6 +39,7 @@ description: LineChart 折线图组件的文档
 
 <preview path="../demo/LineChart/Loading.vue" title="加载状态" description="折线图加载中的效果"></preview>
 
+## API文档
 
 ### LineChart 属性
 

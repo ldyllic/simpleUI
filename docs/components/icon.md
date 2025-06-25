@@ -27,6 +27,8 @@ description: Icon 组件的文档
 
 <preview path="../demo/Icon/animationIcon.vue" title="动画效果" description="Icon 组件的动画效果"></preview>
 
+## API文档
+
 ### Icon 图标属性
 
 |   **参数**    |                         **类型**                         | **默认值** |        **说明**        |                          **可选值**                          |

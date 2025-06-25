@@ -23,6 +23,8 @@ description: Dropdown 组件的文档
 
 <preview path="../demo/Dropdown/manual.vue" title="基础用法" description="Dropdown 组件的手动打开关闭"></preview>
 
+## API文档
+
 ### Dropdown 下拉菜单属性
 | 参数           | 说明                                             | 类型                                                         | 默认值 |
 | :------------- | :----------------------------------------------- | :----------------------------------------------------------- | :----- |

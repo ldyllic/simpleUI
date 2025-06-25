@@ -41,6 +41,8 @@ description: PieChart 饼图的文档
 
 <preview path="../demo/PieChart/Loading.vue" title="加载状态" description="饼图数据加载中的效果"></preview>
 
+## API文档
+
 ### PieChart 饼图属性
 
 |     参数     |                               说明                               |      类型      |     默认值      |
