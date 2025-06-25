@@ -5,7 +5,7 @@ layout: home
 hero:
   name: "Simple UI"
   text: "轻量级的UI组件库"
-  tagline: "基于Vue3+TypeScript的UI组件库"
+  tagline: "基于Vue3+TypeScript+Echarts的UI组件库"
   image:
     src: /SimpleUI.png
     alt: Simple UI
